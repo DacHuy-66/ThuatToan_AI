@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc68cdcf-ad03-4c50-b046-729a4e91fbc6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/BTL_AI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendance_system.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collect_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaceDetect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recognize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecognizeKNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrainKNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/knn_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/trainer.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Dac_Huy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Huu_Phuoc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Minh_Thuan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Nguyen_anh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance_system.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/encodings.pickle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,25 +42,39 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2lu1KanZRokPq705XVmPW3dOnkG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.Attendance System.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FaceDetect.executor&quot;: &quot;Run&quot;,
     &quot;Python.Nhan_Dien'.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Recognize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RecognizeKNN.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TrainKNN.executor&quot;: &quot;Run&quot;,
     &quot;Python.collect_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/OneDrive/Máy tính/BTL_AI&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/BTL_AI&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.Attendance System">
-    <configuration name="Attendance System" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TriTueNhanTao\BTL_AI\dataset" />
+      <recent name="D:\TriTueNhanTao\BTL_AI" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Recognize">
+    <configuration name="FaceDetect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BTL_AI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -65,7 +87,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attendance_system.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FaceDetect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -74,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="collect_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Recognize" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BTL_AI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,7 +109,73 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/collect_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recognize.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RecognizeKNN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BTL_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RecognizeKNN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BTL_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TrainKNN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BTL_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrainKNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,13 +185,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Attendance System" />
-      <item itemvalue="Python.collect_data" />
+      <item itemvalue="Python.FaceDetect" />
+      <item itemvalue="Python.RecognizeKNN" />
+      <item itemvalue="Python.Recognize" />
+      <item itemvalue="Python.TrainKNN" />
+      <item itemvalue="Python.Train" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Attendance System" />
-        <item itemvalue="Python.collect_data" />
+        <item itemvalue="Python.Recognize" />
+        <item itemvalue="Python.Train" />
+        <item itemvalue="Python.RecognizeKNN" />
+        <item itemvalue="Python.TrainKNN" />
+        <item itemvalue="Python.FaceDetect" />
       </list>
     </recent_temporary>
   </component>
@@ -124,5 +218,8 @@
       <updated>1726015085049</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
