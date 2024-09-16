@@ -1,81 +1,61 @@
 import cv2
 import os
-import time
+import numpy as np
 
-# Khởi tạo camera
-cam = cv2.VideoCapture(0)
 
-# Kiểm tra xem camera có hoạt động không
-if not cam.isOpened():
-    print("[ERROR] Không thể mở camera")
-    exit()
+class DataCollectorFromFolder:
+    def __init__(self, input_folder='dataset'):
+        self.input_folder = input_folder
+        self.face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        self.hog = cv2.HOGDescriptor()  # Khởi tạo HOG descriptor
 
-# Thiết lập độ phân giải
-cam.set(3, 320)  # Chiều rộng giảm để tăng tốc độ xử lý
-cam.set(4, 240)  # Chiều cao
+    def collect_data(self):
+        X = []
+        y = []
+        for person_name in os.listdir(self.input_folder):
+            person_folder = os.path.join(self.input_folder, person_name)
+            if os.path.isdir(person_folder):
+                for filename in os.listdir(person_folder):
+                    img_path = os.path.join(person_folder, filename)
+                    print(f"Đang xử lý {img_path}...")  # In đường dẫn file đang xử lý
+                    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
 
-# Khởi tạo bộ phát hiện khuôn mặt
-face_detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+                    if img is None:
+                        print(f"Không thể đọc ảnh {filename}")
+                        continue
 
-# Nhập ID khuôn mặt
-face_id = input('\nNhập ID khuôn mặt <return> ==> ')
+                    # Phát hiện khuôn mặt
+                    faces = self.face_cascade.detectMultiScale(img, 1.3, 5)
 
-# Thông báo khởi tạo
-print("\n[INFO] Khởi tạo camera ...")
+                    if len(faces) == 0:
+                        print(f"Không tìm thấy khuôn mặt trong ảnh {filename}")
+                        continue
 
-# Biến đếm số ảnh đã chụp
-count = 0
+                    for (x, y_coord, w, h) in faces:
+                        face = img[y_coord:y_coord + h, x:x + w]
+                        face_resized = cv2.resize(face, (64, 128))  # Resize về kích thước chuẩn 64x128
 
-while True:
-    ret, img = cam.read()
+                        # Trích xuất đặc trưng HOG
+                        features = self.extract_features(face_resized)
 
-    if not ret:
-        print("[ERROR] Không thể đọc được hình ảnh từ camera")
-        break
+                        X.append(features)
+                        y.append(person_name)
+                        print(f"Đã xử lý {filename} của {person_name}")
 
-    # Lật ảnh để phản chiếu theo chiều dọc (tùy chọn)
-    img = cv2.flip(img, 1)  # flip video image horizontally
+        return np.array(X), np.array(y)
 
-    # Chuyển ảnh sang màu xám để phát hiện khuôn mặt
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    def extract_features(self, image):
+        # Đảm bảo rằng ảnh có kích thước đúng trước khi trích xuất đặc trưng HOG
+        if image.shape != (128, 64):  # Kích thước phải đúng 64x128
+            image = cv2.resize(image, (64, 128))
+        # Trích xuất đặc trưng HOG
+        features = self.hog.compute(image)
+        return features.flatten()
 
-    # Phát hiện khuôn mặt
-    faces = face_detector.detectMultiScale(
-        gray,
-        scaleFactor=1.1,  # Giảm để tăng độ chính xác
-        minNeighbors=7,  # Tăng để lọc bỏ các phát hiện sai
-        minSize=(40, 40),
-        flags=cv2.CASCADE_SCALE_IMAGE
-    )
 
-    # Vẽ hình chữ nhật và lưu khuôn mặt vào dataset
-    for (x, y, w, h) in faces:
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-        count += 1
+# Sử dụng class
+collector = DataCollectorFromFolder(input_folder='dataset')
 
-        # Resize khuôn mặt về 100x100 trước khi lưu
-        face_resized = cv2.resize(gray[y:y + h, x:x + w], (100, 100))
-        cv2.imwrite(f"dataset/User.{face_id}.{count}.jpg", face_resized)
-
-        # Hiển thị số lượng ảnh đã chụp lên hình ảnh
-        cv2.putText(img, f'So luong anh: {count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
-
-        # Hiển thị hình ảnh với khung khuôn mặt
-        cv2.imshow('image', img)
-
-        # Thêm thời gian nghỉ giữa mỗi lần chụp ảnh (giúp giảm tải camera và tránh chụp quá nhanh)
-        time.sleep(2)  # Thay đổi thời gian nghỉ giữa mỗi lần chụp ảnh thành 2 giây
-
-    # Kiểm tra phím nhấn (ESC để thoát)
-    k = cv2.waitKey(100) & 0xff
-    if k == 27:  # Nhấn ESC để thoát
-        break
-    elif count >= 8:  # Dừng lại sau khi đã chụp đủ 8 ảnh
-        break
-
-# Thông báo kết thúc
-print("\n[INFO] Thoát")
-
-# Giải phóng camera và đóng các cửa sổ
-cam.release()
-cv2.destroyAllWindows()
+# Tải dataset và trích xuất đặc trưng
+X, y = collector.collect_data()
+print(f"Đã tải {len(X)} ảnh với {len(set(y))} người khác nhau.")

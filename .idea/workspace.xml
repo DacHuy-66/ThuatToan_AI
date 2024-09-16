@@ -5,23 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc68cdcf-ad03-4c50-b046-729a4e91fbc6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FaceDetect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognize.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecognizeKNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TrainKNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haarcascade_frontalface_default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainer/knn_model.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainer/trainer.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data_test/DacHuy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data_test/Thuan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NhanDien.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nhan_dang.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/colect_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Huy/Huy_9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/User.1.9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knn_model.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Dac_Huy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Huu_Phuoc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Minh_Thuan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Nguyen_anh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance_system.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/encodings.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceDetect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recognize.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recognize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecognizeKNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecognizeKNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainKNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrainKNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer/knn_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/trainer/knn_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer/trainer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trainer/trainer.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +72,37 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.Attendance System.executor&quot;: &quot;Run&quot;,
     &quot;Python.FaceDetect.executor&quot;: &quot;Run&quot;,
+    &quot;Python.KNN.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NhanDien.executor&quot;: &quot;Run&quot;,
     &quot;Python.Nhan_Dien'.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Nhan_dang.executor&quot;: &quot;Run&quot;,
     &quot;Python.Recognize.executor&quot;: &quot;Run&quot;,
     &quot;Python.RecognizeKNN.executor&quot;: &quot;Run&quot;,
     &quot;Python.Train.executor&quot;: &quot;Run&quot;,
     &quot;Python.TrainKNN.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add.executor&quot;: &quot;Run&quot;,
+    &quot;Python.colect_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.collect_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/BTL_AI&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/TriTueNhanTao/BTL_AI/dataset&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TriTueNhanTao\BTL_AI\dataset" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TriTueNhanTao\BTL_AI\Data_test" />
       <recent name="D:\TriTueNhanTao\BTL_AI\dataset" />
       <recent name="D:\TriTueNhanTao\BTL_AI" />
+      <recent name="D:\TriTueNhanTao\BTL_AI\Haarcascade" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Recognize">
+  <component name="RunManager" selected="Python.RecognizeKNN">
     <configuration name="FaceDetect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BTL_AI" />
       <option name="ENV_FILES" value="" />
@@ -185,18 +214,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.TrainKNN" />
       <item itemvalue="Python.FaceDetect" />
       <item itemvalue="Python.RecognizeKNN" />
       <item itemvalue="Python.Recognize" />
-      <item itemvalue="Python.TrainKNN" />
       <item itemvalue="Python.Train" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Recognize" />
-        <item itemvalue="Python.Train" />
         <item itemvalue="Python.RecognizeKNN" />
         <item itemvalue="Python.TrainKNN" />
+        <item itemvalue="Python.Recognize" />
+        <item itemvalue="Python.Train" />
         <item itemvalue="Python.FaceDetect" />
       </list>
     </recent_temporary>
